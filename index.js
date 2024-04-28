@@ -38,6 +38,28 @@ console.log(maxProductOfTwo(nums)); // Output should be 42 (3 * 7)
 
 alert (a*b);
 
+// Question no 2
+
+
+function twoSum(nums, target) {
+    const numIndices = {};
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+        if (numIndices.hasOwnProperty(complement)) {
+            // print on alert
+
+            
+            alert(`Indices: ${numIndices[complement]} and ${i}`);
+            return [numIndices[complement], i];
+        }
+        numIndices[nums[i]] = i;
+    }
+}
+
+// Example usage:
+const num = [2, 7, 11, 15];
+const target = 9;
+twoSum(nums, target); 
 
 
 //Question no 03
@@ -54,6 +76,7 @@ function reverse(string) {
 console.log(reverse('')); // Outputs: ""
 
 alert(reverse(prompt('Enter your Name')));
+
 
 
 // Question # 04: Write a JavaScript program to display the reading status (i.e. display
